@@ -1,0 +1,103 @@
+  ul
+            {
+                list-style-type: none;
+            }
+       
+            ul li a 
+            {
+                text-decoration: none;
+                padding: 10px 30px;
+     
+                
+            }
+            h2,p, ol
+            {
+                margin:0% 20%;
+            }
+
+a
+{
+    color:darkred;
+    
+}
+
+a:hover{
+    color:red;
+    font-weight: bold;
+}
+.copyright
+{
+    text-align: right;
+}
+.copyright::before
+{
+    content: " © 2019 "
+}
+.copyright::after
+{
+    content: " XYZ "
+}
+body
+{
+    font-family: sans-serif;
+    border-bottom: 2px solid black;
+}
+h1
+{
+    color:brown;
+}
+
+body
+            {
+                border-bottom: 2px solid #000;
+            }
+            img
+            {
+                box-shadow: 5px 5px 3px 2px darkgray;
+            }
+
+ul>li>a:hover
+{
+    
+    background-image: linear-gradient(360deg, red 0% , white 30% );
+}
+
+nav.d-navbar > ul > li > a.nav-link 
+{
+    color:white;
+    display: block;
+    padding: 20px;
+    float:left;
+    font-weight: bold;
+    
+}
+nav.d-navbar > ul > li > a.logout 
+{
+    float:right;
+    
+}
+
+nav.d-navbar > ul > li > a.nav-link:hover
+{
+    background-image: none;
+    background-color:lightgray;
+    
+}
+
+nav.d-navbar > ul
+{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+nav.d-navbar
+{
+    background-color: darkred;
+    margin:0;
+    padding:0;
+}
+body
+{
+    padding: 0;
+    margin:0;
+}
