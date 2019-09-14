@@ -1,0 +1,38 @@
+.mover
+{
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding: 10px 50px;
+    color:#565656;
+
+    border-radius: 5px;
+}
+.mover .main-image
+{
+    vertical-align: bottom;;
+    width = 60px;
+    height: 60px;
+}
+.mover .heading
+{
+    font-size: 2em;
+    text-transform: none;
+}
+.mover .text
+{
+    display: inline-block;
+    margin-left: 10px;
+}
+.mover
+{
+    margin-left:-55%;
+
+}
+.mover
+{
+    transition: 1s all;
+}
+.mover:hover
+{
+    margin-left:-15%;
+}

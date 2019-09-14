@@ -1,0 +1,116 @@
+body
+{
+    background-color: #e2e2e2;
+    
+    
+}
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+header
+{
+    font-family: cursive;
+    width: 100%;
+    padding: 40px 40px;
+    background-image: linear-gradient(to right, red 0%, white 30%, red 100%);
+
+}
+header p
+{
+    text-indent: 50px;
+}
+header h1
+{
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+/*Main Content*/
+main
+{
+    max-width: 60%;
+    min-width: 60%;
+    flex:1;
+    float: left;
+    padding: 50px;
+
+}
+main .news .title
+{
+    color:red;
+    
+    
+}
+
+main .news .news-image
+{
+    float:left;
+    margin: 10px;
+}
+main .news .content
+{
+    text-align: justify;
+}
+
+aside
+{
+    max-width: 40%;
+    min-width: 25.6%;
+    height: auto;
+    padding: 40px;
+    float:right;
+
+}
+aside ul
+{
+    list-style-position: inside;
+}
+footer
+{
+    width:100%;
+    padding: 40px;
+    clear: both;
+     background-image: linear-gradient(to right, red 0%, white 30%, red 100%);
+}
+
+nav
+{
+    background-color: black;
+ 
+    
+}
+nav ul
+{
+    list-style-type: none;
+    
+}
+nav ul li
+{
+    display:inline-block;
+}
+nav ul li a
+{
+    display: block;
+    padding: 10px 20px;
+    color:white;
+   
+    text-decoration:none;
+    border-right: 3px solid grey;
+}
+
+nav ul li a:hover
+{
+  
+ 
+    color:red;
+    font-weight: bold;
+    background-color: white;
+   
+
+    border-right: 3px solid darkred;
+}

@@ -1,0 +1,80 @@
+body
+{
+    margin:2% 10%;
+    color:white;
+    font-family: sans-serif;
+    padding: 0;
+    background-color: #355663;
+}
+.heading
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3em;
+    outline: 15px 15px solid black;
+}
+.sub-heading
+{
+    line-height: 0;
+    font-size: 1.8em;
+    outline: 15px 15px solid black;
+    
+   
+}
+header
+{
+    border-bottom:1px solid #233a42;
+
+}
+.brand
+{
+    display: inline-block;
+}
+.navbar-nav
+{
+    background-color: #F0F0F0;
+    list-style-type: none;
+    list-style-position: inside;
+    overflow: hidden;
+    float: right;
+
+    color:#565656;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+.navbar-nav > .nav-item
+{
+    float: left;
+}
+.navbar-nav > .nav-item > .nav-link
+{
+    text-decoration: none;
+    display: block;
+    color:#565656;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 12px 20px;
+}
+main.content
+{
+    padding: 30px 10px;
+}
+
+
+
+
+/*CSS Styling for Blog*/
+
+.blog
+{
+    background-color: #213E4A;
+    display: block;
+    padding: 20px;
+}
+.blog-heading
+{
+    
+}
+

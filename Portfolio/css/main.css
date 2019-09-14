@@ -1,103 +1,132 @@
-  ul
-            {
-                list-style-type: none;
-            }
-       
-            ul li a 
-            {
-                text-decoration: none;
-                padding: 10px 30px;
-     
-                
-            }
-            h2,p, ol
-            {
-                margin:0% 20%;
-            }
-
-a
+* 
 {
-    color:darkred;
-    
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-image: linear-gradient(360deg, darkgray 0%,  white 100%);
+    font-family: sans-serif;
 }
 
-a:hover{
-    color:red;
+img.avatar
+{
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px grey;
+    display: block;
+    margin: 10px auto;
+}
+
+h1, h2
+{
+    color:darkred;
+    text-align: center;
+}
+nav
+{
+    text-align: center;
+}
+ul
+{
+    list-style-type: none;
+}
+ul li
+{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+ul li a
+{
+    text-decoration: none;
+    color:brown;
+    
+}
+ul li a:hover
+{
+    color:brown;
     font-weight: bold;
+}
+p
+{
+    margin:10px 20%;
 }
 .copyright
 {
-    text-align: right;
+    float: right;
 }
 .copyright::before
 {
-    content: " © 2019 "
-}
-.copyright::after
-{
-    content: " XYZ "
-}
-body
-{
-    font-family: sans-serif;
-    border-bottom: 2px solid black;
-}
-h1
-{
-    color:brown;
-}
-
-body
-            {
-                border-bottom: 2px solid #000;
-            }
-            img
-            {
-                box-shadow: 5px 5px 3px 2px darkgray;
-            }
-
-ul>li>a:hover
-{
-    
-    background-image: linear-gradient(360deg, red 0% , white 30% );
-}
-
-nav.d-navbar > ul > li > a.nav-link 
-{
-    color:white;
-    display: block;
-    padding: 20px;
-    float:left;
-    font-weight: bold;
+    content: "© ";
     
 }
-nav.d-navbar > ul > li > a.logout 
+ol
 {
-    float:right;
-    
+    margin:10px 20%;
 }
 
-nav.d-navbar > ul > li > a.nav-link:hover
+nav.d-navbar,nav.d-navbar ul 
 {
-    background-image: none;
-    background-color:lightgray;
-    
-}
-
-nav.d-navbar > ul
-{
-    margin:0;
-    padding:0;
-    overflow: hidden;
-}
-nav.d-navbar
-{
+    list-style-type:none; 
     background-color: darkred;
-    margin:0;
-    padding:0;
-}
-body
-{
+    margin: 0;
     padding: 0;
-    margin:0;
+    overflow: hidden;
+    
+
 }
+nav.d-navbar ul li 
+{
+   display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav.d-navbar ul li.logout
+{
+   
+    float: right;
+}
+
+nav.d-navbar ul li a
+{
+   
+    display: block;
+    color:white;
+    padding: 10px 30px;
+}
+
+nav.d-navbar ul li a:hover
+{
+   
+    background-color: lightgrey;
+}
+.insider
+{
+    overflow: hidden;
+    position: absolute;
+    
+    
+}
+.insider > .nav-link::after
+{
+    content: " >"
+}
+.insider-one
+{
+    display: none;
+    position: absolute;
+   
+}
+.insider-one .insider-one-element
+{
+    display: block;
+    color:lightcyan;
+    float:none;
+}
+.insider:hover .insider-one
+{
+    display: block;
+}
+
