@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                margin:0;
+                padding:0;
+                background-color: #e2e2e2;
+            }
+            .navbar
+            {
+                background-color: darkgray;
+                overflow: hidden;
+            }
+            .navbar .navbar-nav
+            {
+                list-style-type: none;
+                
+            }
+            .navbar .navbar-nav li 
+            {
+                float:left;
+                
+            }
+            .navbar .navbar-nav li a
+            {
+                text-decoration: none;
+                padding: 20px 30px;
+            }
+            .navbar .navbar-nav li a:hover
+            {
+                background-color: rebeccapurple;
+            }
+            .navbar .navbar-nav li .dropdown-content
+            {
+                display: none;;
+               
+                list-style-type: none;
+            }
+            .navbar .navbar-nav li .dropdown-content li a
+            {
+                display: block;
+                color:green;
+                background-color: aqua;
+               
+         
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a href="#">LINK</a></li>
+                <li><a href="#">LINK</a></li>
+                <li><a href="#">LINK</a></li>
+                <li class="dropdown"><a href="#">LINK</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">LINK</a></li>
+                        <li><a href="#">LINK</a></li>
+                        <li><a href="#">LINK</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">LINK</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

@@ -1,6 +1,14 @@
+
+
+@font-face
+{
+    font-family:'kishore';
+    src:url('../fonts/lemon.otf');
+}
 body
 {
     background-color: #e2e2e2;
+    font-family: kishore;
     
     
 }
@@ -103,6 +111,8 @@ nav ul li a
     border-right: 3px solid grey;
 }
 
+
+
 nav ul li a:hover
 {
   
@@ -115,6 +125,8 @@ nav ul li a:hover
     border-right: 3px solid darkred;
 }
 
+
+
 /*Flex Examples*/
 .container
 {
@@ -124,7 +136,8 @@ nav ul li a:hover
     display: flex;
     padding: 20px 0px
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 .box
 {
