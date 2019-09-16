@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Angular JS</title>
+        <meta name="viewport" desccription="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/content.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="top-panel">
+                <div class="nest">
+                    <img src="media/angular.png" class="brand"/>
+                    <p class="brand-name">Learn Angular</p>
+                </div>
+                <div class="nest nest-right">
+                    <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+
+                    <a href="https://www.github.com" class="social-icon"><i class="fab fa-github"></i></a>
+
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="get-started.html" class="nav-link">  Get Started</a></li>
+                    <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="other-section">
+                <h1 class="article-heading">Introduction to the Angular Docs</h1>
+                <p class="article-text">These Angular docs help you learn and use the Angular platform and framework, from your first app to optimizing complex enterprise apps. Tutorials and guides include downloadable example to accelerate your projects.</p>
+                <h3>Assumptions</h3>
+                <p class="article-text">These docs assume that you are already familiar with HTML, CSS, JavaScript, and some of the tools from the latest standards, such as classes and modules. The code samples are written using TypeScript. Most Angular code can be written with just the latest JavaScript, using types for dependency injection, and using decorators for metadata.</p>
+                <h3>Architecture overview</h3>
+                <p class="article-text">Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.</p>
+                <p class="article-text">The basic building blocks of an Angular application are NgModules, which provide a compilation context for components. NgModules collect related code into functional sets; an Angular app is defined by a set of NgModules. An app always has at least a root module that enables bootstrapping, and typically has many more feature modules.</p>
+                <ul>
+                    <li>Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.</li>
+                    <li>Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.</li>
+                </ul>
+                <h3>Modules</h3>
+                <p class="article-text">
+                    Angular NgModules differ from and complement JavaScript (ES2015) modules. An NgModule declares a compilation context for a set of components that is dedicated to an application domain, a workflow, or a closely related set of capabilities. An NgModule can associate its components with related code, such as services, to form functional units.
+                </p>
+                <p class="article-text">
+                    Every Angular app has a root module, conventionally named AppModule, which provides the bootstrap mechanism that launches the application. An app typically contains many functional modules.
+
+Like JavaScript modules, NgModules can import functionality from other NgModules, and allow their own functionality to be exported and used by other NgModules. For example, to use the router service in your app, you import the Router NgModule.
+                </p>
+                <blockquote>
+                    For a more detailed discussion, see <a href="https://angular.io/guide/architecture-modules">Introduction to modules</a>.
+                </blockquote>
+
+                <p>For Full Docs Please Refer to Angular Website.</p>
+
+                <h4>Other Frameworks</h4>
+                <div class="container">
+                    <a href="https://reactjs.org/" title="React JS Website"><img src="media/react.png" class="other"/></a>
+                    <a href="https://www.vuejs.org" title="Vue JS Website"><img src="media/vue.png" class="other"/></a>
+                </div>
+            </section>
+            <aside class="other-aside">
+                <p>Download The Docs PDF</p>
+                <ul>
+                    <li><a href="modules.pdf">Angular Modules</a></li>
+                    <li><a href="components.pdf">Angular Components</a></li>
+                    <li><a href="forms.pdf">Angular Forms</a></li>
+                    <li><a href="services.pdf">Angular Services</a></li>
+                </ul>
+
+            </aside>
+        </main>
+        <footer>
+            <p class="copyright">Kishore Narang. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,140 @@
+.copyright
+{
+    color:#fff;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.top-panel
+{
+    display: flex;
+    padding:10px 30px;
+}
+.top-panel .nest
+{
+    flex:1;
+}
+.brand
+{
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+.nest-right
+{
+    align-self: flex-end;
+    justify-items: flex-end;
+}
+.brand-name
+{
+    display: inline;
+    font-size: 36px;
+}
+.social-icon
+{
+    color:gray;
+}
+.social-icon:hover{
+    color:#C30F2E;
+}
+
+/*Navbar Coding*/
+
+.navbar
+{
+    background-color:lightgray;
+
+}
+.navbar > .navbar-nav
+{
+    list-style-type: none;
+}
+.navbar > .navbar-nav > .nav-item
+{
+    display: inline-block;
+}
+.navbar > .navbar-nav > .nav-item > .nav-link
+{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+}
+.navbar > .navbar-nav > .nav-item > .nav-link:hover
+{
+
+    background-color:#C30F2E;
+    color:white;
+}
+.copyright::before
+{
+    content: "© Copyright 2019 "
+}
+
+/* Main Section*/
+.container
+{
+    padding: 0px 20px;
+    display: flex;
+}
+.article-heading
+{
+    color:#DD0331;
+    font-size: 2em;
+}
+/* Other Section */
+
+.other-section, .other-aside
+{
+    padding:5%;
+}
+.other-section
+{
+    flex:2;
+    order:1;
+
+}
+.other-aside
+{
+    flex:1;
+    order:0;
+}
+
+.article-text
+{
+    text-align: justify;
+}
+
+
+blockquote
+{
+    display: block;
+    background-color: lightgreen;
+    padding: 20px;
+    border-left: 15px solid green;
+}
+
+.command
+{
+    background-color: #444444;
+    padding: 20px;
+    border-radius: 15px;
+    color:green;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #C30F2E;
+}
+
+.other
+{
+    width: 150px;
+}

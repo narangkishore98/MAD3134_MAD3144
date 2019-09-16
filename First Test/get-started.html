@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Angular JS</title>
+        <meta name="viewport" desccription="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/content.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="top-panel">
+                <div class="nest">
+                    <img src="media/angular.png" class="brand"/>
+                    <p class="brand-name">Learn Angular</p>
+                </div>
+                <div class="nest nest-right">
+                    <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+
+                    <a href="https://www.github.com" class="social-icon"><i class="fab fa-github"></i></a>
+
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="get-started.html" class="nav-link">  Get Started</a></li>
+                    <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="other-section">
+                <h1 class="article-heading">Installation For Angular on Local Machine</h1>
+                <p class="article-text">This guide explains how to set up your environment for Angular development using the Angular CLI tool. It includes information about prerequisites, installing the CLI, creating an initial workspace and starter app, and running that app locally to verify your setup.</p>
+                <h3>Prerequisite</h3>
+                <p class="article-text">Before you begin, make sure your development environment includes Node.js® and an npm package manager.</p>
+                <ul>
+                    <li>Node.js</li>
+                    <li>npm package manager</li>
+                </ul>
+                <h3 id="installation">Step 1: Install the Angular CLI</h3>
+                <p class="article-text">You use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.</p>
+                <p class="article-text">Install the Angular CLI globally.</p>
+                <p class="article-text">To install the CLI using npm, open a terminal/console window and enter the following command:</p>
+                <div class="command">
+                    <code>npm install -g @angular/cli</code>
+                </div>
+                <h3 id="workspace">Step 2: Create a workspace and initial application</h3>
+                <p class="article-text">You develop apps in the context of an Angular workspace.</p>
+                <p class="article-text">To create a new workspace and initial starter app:</p>
+                <ol type="1">
+                    <li>
+                        <p class="article-text">Run the CLI command ng new and provide the name my-app, as shown here:</p>
+                        <div class="command">
+                            <code>ng new my-app</code>
+                        </div>
+                    </li>
+                    <li>The ng new command prompts you for information about features to include in the initial app. Accept the defaults by pressing the Enter or Return key.</li>
+                </ol>
+                <p class="article-text">The Angular CLI installs the necessary Angular npm packages and other dependencies. This can take a few minutes.</p>
+                <p class="article-text">he CLI creates a new workspace and a simple Welcome app, ready to run.</p>
+                <h3 id="run">Step 3: Run the application</h3>
+                <p class="article-text">The Angular CLI includes a server, so that you can easily build and serve your app locally.</p>
+                <ol type="1">
+                    <li>Go to the workspace folder <code>(my-app)</code></li>
+                    <li>Launch the server by using the CLI command <code>ng serve</code>, with the <code>--open </code>option.</li>
+                </ol>
+                <div class="command">
+                    <code>cd my-app<br/>
+                        ng serve --open</code>
+                </div>
+                <blockquote>
+                    Getting Started assumes the StackBlitz online development environment. To learn how to export an app from StackBlitz to your local environment, skip ahead to the Deployment section.
+                </blockquote>
+            </section>
+            <aside class="other-aside">
+                <ul>
+                    <li><a href="#installation">See Installation</a></li>
+                    <li><a href="#workspace">See How To Create a Workspace</a></li>
+                    <li><a href="#run">See How To Run Application</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <p class="copyright">Kishore Narang. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
+
+
+
