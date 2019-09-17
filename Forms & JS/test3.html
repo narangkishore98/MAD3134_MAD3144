@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Image Auto Large</title>
+        <style>
+                .container
+                {
+                    display: flex;
+                
+                    flex-direction: column;
+                    align-items: center;
+               
+                }
+            </style>
+          
+    </head>
+    <body>
+        <h1>Test 3</h1>
+        <div class="container">
+            <div class="items">
+                <img src="media/google.png" width="100" height="100" id="dummyImage"/>
+            </div>
+        </div>
+        <script>
+                var heightWidth = 100;
+                var unlock = 0;
+                
+                function changeSize(){
+                    if(heightWidth<300)
+                    {
+
+                    
+                    heightWidth+=2.5;
+                    document.getElementById("dummyImage").height = heightWidth;
+                    document.getElementById("dummyImage").width = heightWidth;
+                    unlock++;
+                    console.log("Size of the image is "+heightWidth);
+                    }
+                    else{
+                        clearInterval();
+                    }
+                   
+                    
+                
+                }
+                result = setInterval(changeSize,62.5);
+               
+            </script>
+    </body>
+</html>

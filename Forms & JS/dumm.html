@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <style>
+            table{
+                border:1px solid lightgray;
+                background-color: lightgray;
+                padding: 20px;
+                box-shadow: 2px 2px 10px lightgray;
+
+            }
+            th
+            {
+                color:coral;
+                font-size: 28px;
+                padding: 10px;
+            }
+            #welcome
+            {
+                color: chocolate;
+            }
+            td
+            {
+                padding: 5px 20px;
+                text-transform: uppercase;
+            }
+            input 
+            {
+                font-size: 18px;
+       
+            }
+            input:focus
+            {
+                outline: none !important;
+                box-shadow: 0 0 10px coral;
+            }
+            button{
+                border-radius: 50%;
+                font-size: 18px;
+                padding: 10px;
+                background-color: darkgray;
+                box-shadow: 2px 2px 10px darkgray;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        
+        <table>
+            <tr>
+                <th colspan="2">
+                    <h1 id="welcome"></h1>
+                    Simple Calculator
+                </th>
+            </tr>
+            <tr>
+                <td>Number 1:</td>
+                <td><input type="text" id="n1" /></td>
+            </tr>
+            <tr>
+                <td>Number 2:</td>
+                <td><input type="text" id="n2" /></td>
+            </tr>
+
+            <tr>
+                    <td>Result</td>
+                    <td><input type="text" id="res" readonly="readonly"/></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button id="plus">+</button>
+                    <button id="minus">-</button>
+                    <button id="divide">/</button>
+                    <button id="mul">x</button>
+                    <button id="clear">Clear</button>
+                </th>
+            </tr>
+            <tr>
+                    <th colspan="2">
+                        <p id="danger"></p>
+                    </th>
+                </tr>
+        </table>
+    </center>
+    <script>
+        "use strict";
+        var params = {};
+
+        if (location.search) {
+            var parts = location.search.substring(1).split('&');
+
+            for (var i = 0; i < parts.length; i++) {
+                var nv = parts[i].split('=');
+                if (!nv[0]) continue;
+                params[nv[0]] = nv[1] || true;
+            }
+        }
+        document.getElementById("welcome").innerHTML = params.fullName.replace("%20"," ");
+        var n1 = document.getElementById("n1");
+        var n2 = document.getElementById("n2");
+        var res = document.getElementById("res");
+        res.style.color = "orange";
+        document.getElementById("plus").onclick = add;
+        document.getElementById("minus").onclick = minus;
+        document.getElementById("divide").onclick = divide;
+        document.getElementById("mul").onclick = mul;
+        document.getElementById("clear").onclick = clear;
+        document.getElementById("danger").style.color = "red"
+        
+        function add()
+        {
+            if(n1.value == "" || n2.value == "")
+            {
+                
+                document.getElementById("danger").innerHTML = "Please Enter Value in all the fields."
+            }
+            else if(isNaN(parseInt(n1.value)) || isNaN(parseInt(n2.value)))
+            {
+                document.getElementById("danger").innerHTML = "Please enter correct integers."
+            }
+            else
+            {
+                res.value = parseInt(n1.value) + parseInt(n2.value)  
+                document.getElementById("danger").innerHTML = ""
+            }
+        }
+         
+        function minus()
+        {
+            if(n1.value == "" || n2.value == "")
+            {
+                
+                document.getElementById("danger").innerHTML = "Please Enter Value in all the fields."
+            }
+            else if(isNaN(parseInt(n1.value)) || isNaN(parseInt(n2.value)))
+            {
+                document.getElementById("danger").innerHTML = "Please enter correct integers."
+            }
+            else
+            {
+                res.value = parseInt(n1.value) - parseInt(n2.value)  
+                document.getElementById("danger").innerHTML = ""
+            }
+        }
+        function divide()
+        {
+            if(n1.value == "" || n2.value == "")
+            {
+                
+                document.getElementById("danger").innerHTML = "Please Enter Value in all the fields."
+            }
+            else if(isNaN(parseInt(n1.value)) || isNaN(parseInt(n2.value)))
+            {
+                document.getElementById("danger").innerHTML = "Please enter correct integers."
+            }
+            else
+            {
+                res.value = parseInt(parseInt(n1.value)) / parseInt(n2.value)  
+                document.getElementById("danger").innerHTML = ""
+            }
+        }
+        function mul()
+        {
+            if(n1.value == "" || n2.value == "")
+            {
+                
+                document.getElementById("danger").innerHTML = "Please Enter Value in all the fields."
+            }
+            else if(isNaN(parseInt(n1.value)) || isNaN(parseInt(n2.value)))
+            {
+                document.getElementById("danger").innerHTML = "Please enter correct integers."
+            }
+            else
+            {
+                res.value = parseInt(n1.value) * parseInt(n2.value)  
+                document.getElementById("danger").innerHTML = ""
+            }
+        }
+        function clear()
+        {
+            n1.value = "";
+            n2.value = "";
+            res.value = ""
+        }
+    
+    </script>
+    </body>
+</html>

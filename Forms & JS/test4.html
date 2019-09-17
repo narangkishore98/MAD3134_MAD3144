@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Image Auto Large</title>
+        <style>
+            .container
+            {
+                display: flex;
+                flex-direction: row-reverse;
+                align-content: center;
+            }
+            .inside
+            {
+                flex: 1;
+            }
+            body{
+                margin:0;
+                padding: 0;
+            }
+        </style>
+          
+    </head>
+    <body>
+ 
+        <div class="container">
+            <div class="inside">
+                <img src="media/google.png" width="100px" style="position: relative; top: 0;" id="dummyImage" height="100px"/>
+            </div>
+            <div class="inside">
+                <button id="start" >Start</button>
+                <button id="end">Stop</button>
+            </div>
+        </div>
+
+        <script>
+       
+            var add = 0;
+            console.log(window.innerHeight)
+            var flag = true;
+            function moveImage()
+            {
+                var minTop = 0;
+                var maxTop = window.innerHeight - 100;
+                
+               
+                var top = document.getElementById("dummyImage").style.top.replace("px","")
+               
+                if(top<maxTop && flag==true)
+                {
+                    add += 1
+                    document.getElementById("dummyImage").style.top = add
+                    if(add==621)
+                    {
+                        flag=false;
+                        console.log("set to false");
+                    }
+                    console.log(add);
+                }
+                if(top>minTop && flag==false)
+                {
+                    add -= 1
+                    document.getElementById("dummyImage").style.top = add
+                    if(add==0)
+                    {
+                        flag=true;
+                    }
+                }
+                
+            }
+            var result;
+            document.getElementById("start").onclick = function(){
+                result  = setInterval(moveImage,2);
+                //console.log(document.getElementById("dummyImage").style.left)
+                console.log(result)
+            }
+            document.getElementById("end").onclick = function(){
+                clearInterval(result)   
+            }
+
+        
+        </script>
+      
+    </body>
+</html>

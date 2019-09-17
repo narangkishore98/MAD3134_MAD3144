@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Image Resizer</title>
+        <style>
+            .container
+            {
+                display: flex;
+   
+                justify-content: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test 1</h1>
+        <img src="https://www.dummyimage.com/100x100/" id="dummyImage"/>
+        <br/><br/>
+        <div class="container">
+                <div class="data">
+                        <label> Height:</label>
+                        <input type="range" min="0" id="height" max="400" value="100"/>
+                
+                        <label> Width:</label>
+                        <input type="range" min="0" id="width" max="400" value="100"/>
+                </div>
+        </div>
+        <script>
+            "use strict";
+            document.getElementById("width").onchange = changeWidth;
+            document.getElementById("height").onchange = changeHeight;
+        
+            function changeWidth()
+            {
+                console.log("Changing Value");
+                document.getElementById("dummyImage").src = "https://www.dummyimage.com/"+document.getElementById("width").value+"x"+document.getElementById("height").value+"/"
+            }
+            function changeHeight()
+            {
+                console.log("Changing Value");
+                document.getElementById("dummyImage").src = "https://www.dummyimage.com/"+document.getElementById("width").value+"x"+document.getElementById("height").value+"/"
+
+            }
+        </script>
+    </body>
+</html>

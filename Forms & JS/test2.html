@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>
+            Image Carausal
+        </title>
+        <style>
+            .container
+            {
+                display: flex;
+            
+                flex-direction: column;
+                align-items: center;
+           
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test 2</h1>
+        
+
+        <div class="container">
+            <h1></h1>
+            <div class="items">
+                    <img src="media/facebook.png" id="dummyImage" width="200" height="200"/>
+            </div>
+            <div class="items">
+                   
+                    <br/>
+                <button type="button" id="first" >First</button>
+                <button type="button" id="previous" >Previous</button>
+                <button type="button" id="next" >Next</button>
+                <button type="button" id="last" >Last</button>
+            </div>
+        </div>
+        <script>
+            var currentPos = 0;
+            var imageNames = ["facebook.png","google.png","paypal.jpg","tesla.png"];
+            document.getElementById("first").onclick = firstSlide
+            document.getElementById("last").onclick = lastSlide
+            document.getElementById("next").onclick = nextSlide
+            document.getElementById("previous").onclick = previousSlide
+
+            function firstSlide()
+            {
+                console.log(imageNames[0]);
+                currentPos = 0;
+                document.getElementById("dummyImage").src = "media/"+imageNames[0];
+
+
+            }
+            function lastSlide()
+            {
+                currentPos = imageNames.length-1
+                document.getElementById("dummyImage").src = "media/"+imageNames[imageNames.length-1];
+            }
+            function nextSlide()
+            {
+                currentPos++;
+                if(currentPos>=imageNames.length)
+                {
+                    currentPos = 0;
+                }
+                document.getElementById("dummyImage").src = "media/"+imageNames[currentPos];
+            }
+
+            function previousSlide()
+            {
+                currentPos--;
+                if(currentPos<=0)
+                {
+                    currentPos = imageNames.length-1;
+                }
+                document.getElementById("dummyImage").src = "media/"+imageNames[currentPos];
+              
+            }
+        </script>
+    </body>
+</html>

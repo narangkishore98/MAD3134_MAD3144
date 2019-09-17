@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #e2e2e2;
+}
+.row
+{
+    display: flex;
+}
+.col
+{
+    flex:1;
+    padding: 20px;
+}
+.center
+{
+    text-align: center;
+}
+
+input.form-control
+{
+    width: 100%;
+    border:none;
+    margin:3px 0px;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 10px;
+}
+input.form-control:focus
+{
+ 
+    outline: none !important;
+    box-shadow: 0 0 10px aquamarine;
+    
+
+}
+button.btn
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+    border:none;
+    background-color:aquamarine; 
+}
+button.btn:active, button.btn:focus
+{
+    outline: none !important;
+    box-shadow: 0 0 10px rgb(2, 88, 60);
+}

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Forms & JavaScript</title>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h1 class="center">Welcome To Bikloo</h1>
+                <form>
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        <label>First Name:</label>
+                        <input type="text" class="form-control" id="firstName"/>
+                        <label>Last Name:</label>
+                        <input type="text" class="form-control" id="lastName"/>
+                        <label>Email:</label>
+                        <input type="email" class="form-control" id="email"/>
+                        <label>Password:</label>
+                        <input type="password" class="form-control" id="password"/>
+                        
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            Technical
+                        </legend>
+                        <label>Most Known Programming Language: </label>
+                        <br/><br/>
+                        <input type="radio" id="python" name="pl" value="python"/><label>Python</label><br/>
+                        <input type="radio" id="java" name="pl" value="java"/><label>Java</label><br/>
+                        <input type="radio" id="kotlin" name="pl" value="kotlin"/><label>Kotlin</label><br/>
+                        <input type="radio" id="c" name="pl" value="c"/><label>C</label><br/>
+                        <input type="radio" id="c++" name="pl" value="c++"/><label>C++</label><br/>
+                        <input type="radio" id="c#" name="pl" value="c#"/><label>C#</label><br/>
+                        <input type="radio" id="swift" name="pl" value="swift"/><label>Swift</label><br/>
+                        <input type="radio" id="r" name="pl" value="r"/><label>R</label><br/>
+                        <input type="radio" id="other" name="pl" value="other"/><label>Other</label><br/><br/>
+                        <label>If Other, Please specify:</label>
+                        <input type="text" id="other_text"  class="form-control"/>
+                        <button class="btn" type="button" onclick="validate()" >Submit Your Details</button>
+                    </fieldset>
+                </form>
+                <p id="danger"></p>
+            </div>
+            <div class="col"></div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
