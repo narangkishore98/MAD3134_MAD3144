@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <title>Moving Box</title>
+        <style>
+            body
+            {
+                margin: 0;
+                padding: 0;
+            }
+            .box
+            {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                position: absolute;
+                
+            }
+            .container
+            {
+                height: 10em;
+                display: flex;
+                align-items: center;
+                justify-content: center
+            
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box" id="box"></div>
+        <div class="container">
+           <div class="button">
+               <h1 id="counter">1</h1>
+                <button id="stop">Stop</button>
+           </div>
+        </div>
+        <script>
+            var colors = ["green","red","blue","orange","black","aqua","grey"];
+            var box = document.getElementById("box");
+            var maxHeight = window.innerHeight  - 50;
+            var maxWidth = window.innerWidth - 50;
+            var toLeft = false;
+            var toRight = true;
+            var toBottom = false;
+            var toTop = false;
+            var clockwise = true;
+            box.style.top = 0;
+            box.style.left = 0;
+            var add = 0;
+            var counter = 1;
+            function move()
+            {
+              
+                if(clockwise && toRight)
+                {
+                    if(box.style.left.replace("px","") < maxWidth)
+                    {
+                        add = add + 3;
+                        box.style.left = add;
+                        console.log("Going Right");
+                        console.log(box.style.left);
+                    }
+                    else{
+                        toRight = false;
+                        toBottom = true;
+                        console.log("Right Finished");
+                        add = 0;
+                    }
+                }
+                else if(clockwise && toBottom)
+                {
+                    if(box.style.top.replace("px","") < maxHeight)
+                    {
+                        add = add + 3;
+                        box.style.top = add;
+                        console.log("Going Bottom");
+                        console.log(box.style.top);
+                        
+                    }
+                    else{
+                        toBottom = false;
+                        toLeft = true;
+                        add = box.style.left.replace("px","");
+                        console.log("Bottom Finished");
+                      
+                    }
+                }
+                else if(clockwise && toLeft)
+                {
+                    if(box.style.left.replace("px","") >= 0)
+                    {
+                        add = add - 3
+                        box.style.left = add;
+                        console.log("Going Left");
+                        
+                    }
+                    else{
+                        toLeft = false;
+            
+                        add = box.style.top.replace("px","");
+                        
+                        toTop = true;
+                        console.log("Bottom Finished");
+
+
+                       
+                    }
+                }
+                else if(clockwise && toTop)
+                {
+                    if(box.style.top.replace("px","") > 0)
+                    {
+                        add = add - 3;
+                        box.style.top = add;
+                    }
+                    else{
+                        toTop = false;
+                        toBottom = true;
+                        add = 0;
+                        clockwise = false;
+                        document.getElementById("counter").innerHTML = ++counter;
+                        box.style.backgroundColor = colors[parseInt(Math.random()*10 - 3)]
+                        
+                    }
+                }
+                else if(!clockwise && toBottom)
+                {
+                    if(box.style.top.replace("px","") < maxHeight)
+                    {
+                        add = add + 3;
+                        box.style.top = add;
+                    }
+                    else{
+                        toBottom = false;
+                        toRight = true;
+                        add = 0;
+                        
+                    }
+                }
+                else if(!clockwise && toRight)
+                {
+                    if(box.style.left.replace("px","") < maxWidth)
+                    {
+                        add = add + 3;
+                        box.style.left = add;
+                    }
+                    else{
+                        toRight = false;
+                        toTop = true;
+                        add = box.style.top.replace("px","") ;
+                        
+                    }
+                }
+                else if(!clockwise && toTop)
+                {
+                    if(box.style.top.replace("px","") > 0)
+                    {
+                        add = add - 3;
+                        box.style.top = add;
+                    }
+                    else{
+                        toTop = false;
+                        toLeft = true;
+                        add = box.style.left.replace("px","") ;
+                        
+                    }
+                }
+                else if(!clockwise && toLeft)
+                {
+                    if(box.style.left.replace("px","") > 0)
+                    {
+                        add = add - 3;
+                        box.style.left = add;
+                    }
+                    else{
+                        toLeft = false;
+                        toRight = true;
+                        add = 0;
+                        clockwise = true;
+                        document.getElementById("counter").innerHTML = ++counter;
+                        box.style.backgroundColor = colors[parseInt(Math.random()*10-3)]
+                        
+                        
+                    }
+               
+                }
+                console.log("In Move");
+            }
+            
+
+            var interval =  setInterval(move, 0.02);
+            document.getElementById("stop").onclick = function(){
+                clearInterval(interval)
+            }
+            
+        </script>
+    </body>
+</html>
