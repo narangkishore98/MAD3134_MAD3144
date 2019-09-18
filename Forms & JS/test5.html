@@ -69,7 +69,7 @@
                 }
                 else if(clockwise && toBottom)
                 {
-                    if(box.style.top.replace("px","") < maxHeight)
+                    if(box.style.top.replace("px","") < maxHeight-1)
                     {
                         add = add + 3;
                         box.style.top = add;
@@ -87,7 +87,7 @@
                 }
                 else if(clockwise && toLeft)
                 {
-                    if(box.style.left.replace("px","") >= 0)
+                    if(box.style.left.replace("px","") > 0)
                     {
                         add = add - 3
                         box.style.left = add;
@@ -125,7 +125,7 @@
                 }
                 else if(!clockwise && toBottom)
                 {
-                    if(box.style.top.replace("px","") < maxHeight)
+                    if(box.style.top.replace("px","") < maxHeight-1)
                     {
                         add = add + 3;
                         box.style.top = add;
