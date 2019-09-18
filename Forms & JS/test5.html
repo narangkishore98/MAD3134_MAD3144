@@ -192,11 +192,14 @@
             
 
             var interval =  setInterval(move, 0.02);
+            document.getElementById("stop").style.backgroundColor = "red"
+            document.getElementById("stop").style.color = "white"
             document.getElementById("stop").onclick = function(){
                 if(btnStop)
                 {
                     clearInterval(interval);
                     document.getElementById("stop").innerHTML = "Start";
+                    document.getElementById("stop").style.backgroundColor = "green"
                     btnStop=false;
                     //alert("Stopped");
                 }
@@ -211,6 +214,7 @@
                         alert(err);
                     }
                     document.getElementById("stop").innerHTML = "Stop"
+                    document.getElementById("stop").style.backgroundColor = "red"
                     btnStop = true;
                     
                 }
