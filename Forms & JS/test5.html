@@ -48,6 +48,9 @@
             box.style.left = 0;
             var add = 0;
             var counter = 1;
+            var btnStop = true;
+
+
             function move()
             {
               
@@ -69,7 +72,7 @@
                 }
                 else if(clockwise && toBottom)
                 {
-                    if(box.style.top.replace("px","") < maxHeight-1)
+                    if(box.style.top.replace("px","") < maxHeight)
                     {
                         add = add + 3;
                         box.style.top = add;
@@ -125,7 +128,7 @@
                 }
                 else if(!clockwise && toBottom)
                 {
-                    if(box.style.top.replace("px","") < maxHeight-1)
+                    if(box.style.top.replace("px","") < maxHeight)
                     {
                         add = add + 3;
                         box.style.top = add;
@@ -190,7 +193,27 @@
 
             var interval =  setInterval(move, 0.02);
             document.getElementById("stop").onclick = function(){
-                clearInterval(interval)
+                if(btnStop)
+                {
+                    clearInterval(interval);
+                    document.getElementById("stop").innerHTML = "Start";
+                    btnStop=false;
+                    //alert("Stopped");
+                }
+                else
+                {
+                    //alert("Started");
+                    try{
+                        interval = setInterval(move, 0.02);
+                    }
+                    catch(err)
+                    {
+                        alert(err);
+                    }
+                    document.getElementById("stop").innerHTML = "Stop"
+                    btnStop = true;
+                    
+                }
             }
             
         </script>
